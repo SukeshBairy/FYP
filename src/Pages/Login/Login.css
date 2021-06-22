@@ -1,0 +1,105 @@
+.login {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.login > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login > h2 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-top: 1%;
+  margin-bottom: 40px;
+  color: #2e1114;
+}
+
+.login > form > input {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  border: none;
+  outline: gray;
+  margin-left: 5%;
+}
+
+.login > form > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #6b5b95;
+  height: 40px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  color: whitesmoke;
+  margin-left: 15%;
+  outline: none;
+  font-weight: 600;
+}
+
+.login__register {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #0177b7;
+  cursor: pointer;
+}
+
+.login > p {
+  margin-left: 40px;
+}
+
+.login > form > input:focus::-webkit-input-placeholder {
+  font-size: 0.75em;
+  position: relative;
+  top: -15px;
+  transition: 0.2s ease-out;
+}
+
+.login > form > input::-webkit-input-placeholder {
+  transition: 0.2s ease-in;
+}
+
+.login__newMember {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.login__gmailLogin {
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  border: none;
+  outline: gray;
+  margin-left: 87%;
+}
+
+.login__gmailLogin > img {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 28px;
+}
+
+.login__gmailLogin > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 1%;
+  margin-bottom: 40px;
+  color: black;
+}

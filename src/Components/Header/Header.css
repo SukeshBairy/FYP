@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #501b1d;
+  align-items: center;
+  height: 70px;
+  top: 0;
+  z-index: 1;
+  position: sticky;
+}
+
+.header__logo > img {
+  object-fit: contain;
+  height: 35px;
+  width: 35px;
+  margin: 20px;
+}
+
+.header__logo > img:hover {
+  cursor: pointer;
+}
+
+.header__options {
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.header__optionsHome,
+.header__optionsPredict,
+.header__optionsVisualize,
+.header__optionsInsights,
+.header__optionsContact {
+  margin-right: 25px;
+}
+
+.header__optionsHome:hover,
+.header__optionsPredict:hover,
+.header__optionsVisualize:hover,
+.header__optionsInsights:hover,
+.header__optionsContact:hover {
+  padding-bottom: 7px;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
