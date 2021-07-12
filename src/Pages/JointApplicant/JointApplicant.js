@@ -2,29 +2,45 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import Header from "../../Components/Header/Header";
 import "./JointApplicant.css";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 300,
+    marginLeft: 50,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 function JointApplicant() {
   const history = useHistory();
 
-  const [creditLine, setCreditLine] = useState();
-  const [cibil1, setCibil1] = useState();
-  const [cibil2, setCibil2] = useState();
-  const [loan, setLoan] = useState();
+  const [er_credit_open_date, setEr_credit_open_date] = useState();
+  const [fico_avg_score, setFico_avg_score] = useState();
+  const [sec_fico_avg_score, setSec_fico_avg_score] = useState();
+  const [loan_amnt, setLoan_amnt] = useState();
   const [term, setTerm] = useState();
-  const [homeOwnership, setHomeOwnership] = useState();
-  const [annualIncome1, setAnnualIncome1] = useState();
-  const [annualIncome2, setAnnualIncome2] = useState();
-  const [currentBalance, setCurrentBalance] = useState();
-  const [debtRatio, setDebtRatio] = useState();
-  const [mortgage, setMortgage] = useState();
-  const [creditUsed, setCreditUsed] = useState();
-  const [creditInquires, setCreditInquires] = useState();
-
+  const [home_ownership, setHome_ownership] = useState();
+  const [annual_inc, setAnnual_inc] = useState();
+  const [sec_annual_inc, setSec_annual_inc] = useState();
+  const [total_bal_il, setTotal_bal_il] = useState();
+  const [dti_joint, setDti_joint] = useState();
+  const [sec_app_mort_acc, setSec_app_mort_acc] = useState();
+  const [sec_app_revol_util, setSec_app_revol_util] = useState();
+  const [sec_app_inq_last_6mths, setSec_app_inq_last_6mths] = useState();
+  const classes = useStyles();
   return (
     <div className="jointApplicant">
       <Header />
       <div className="jointApplicant__heading">
-        <h2>Join Applicant</h2>
+        <h2>Joint Applicant</h2>
       </div>
 
       <div className="jointApplicant__main">
@@ -52,62 +68,75 @@ function JointApplicant() {
               <input
                 type="date"
                 placeholder="Earliest Credit Line Open Date"
-                value={creditLine}
+                value={er_credit_open_date}
                 onChange={(e) => {
-                  setCreditLine(e.target.value);
+                  setEr_credit_open_date(e.target.value);
                 }}
               />
               <input
                 type="number"
                 min="600"
-                placeholder="Cibil Score"
-                value={cibil1}
+                placeholder="Fico Score"
+                value={fico_avg_score}
                 onChange={(e) => {
-                  setCibil1(e.target.value);
+                  setFico_avg_score(e.target.value);
                 }}
               />
               <input
                 type="number"
                 min="1000"
                 placeholder="Loan Amount(₹1000>)"
-                value={loan}
+                value={loan_amnt}
                 onChange={(e) => {
-                  setLoan(e.target.value);
+                  setLoan_amnt(e.target.value);
                 }}
               />
-              <input
-                type="number"
-                min="0"
-                placeholder="Term(in months)"
-                value={term}
-                onChange={(e) => {
-                  setTerm(e.target.value);
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Home Ownership"
-                value={homeOwnership}
-                onChange={(e) => {
-                  setHomeOwnership(e.target.value);
-                }}
-              />
+
+              <FormControl className={classes.formControl}>
+                <InputLabel id="meal-select-label">Term(in months)</InputLabel>
+                <Select
+                  labelId="meal-select-label"
+                  id="meal-select-label"
+                  value={term}
+                  onChange={(e) => setTerm(e.target.value)}
+                >
+                  <MenuItem value={"36"}>36</MenuItem>
+                  <MenuItem value={"60"}>60</MenuItem>
+                </Select>
+              </FormControl>
+
+              <FormControl className={classes.formControl}>
+                <InputLabel id="meal-select-label">Home Ownership</InputLabel>
+                <Select
+                  labelId="meal-select-label"
+                  id="meal-select-label"
+                  value={home_ownership}
+                  onChange={(e) => setHome_ownership(e.target.value)}
+                >
+                  <MenuItem value={"MORTGAGE"}>MORTGAGE</MenuItem>
+                  <MenuItem value={"RENT"}>RENT</MenuItem>
+                  <MenuItem value={"OWN"}>OWN</MenuItem>
+                  <MenuItem value={"ANY"}>ANY</MenuItem>
+                  <MenuItem value={"OTHER"}>OTHER</MenuItem>
+                  <MenuItem value={"NONE"}>NONE</MenuItem>
+                </Select>
+              </FormControl>
               <input
                 type="number"
                 min="0"
                 placeholder="Annual Income"
-                value={annualIncome1}
+                value={annual_inc}
                 onChange={(e) => {
-                  setAnnualIncome1(e.target.value);
+                  setAnnual_inc(e.target.value);
                 }}
               />
               <input
                 type="number"
                 min="0"
                 placeholder="Current Balance Owed on installment accounts"
-                value={currentBalance}
+                value={total_bal_il}
                 onChange={(e) => {
-                  setCurrentBalance(e.target.value);
+                  setTotal_bal_il(e.target.value);
                 }}
               />
             </div>
@@ -115,45 +144,45 @@ function JointApplicant() {
               <input
                 type="number"
                 min="600"
-                placeholder="Cibil Score"
-                value={cibil2}
+                placeholder="Fico Score"
+                value={sec_fico_avg_score}
                 onChange={(e) => {
-                  setCibil2(e.target.value);
+                  setSec_fico_avg_score(e.target.value);
                 }}
               />
               <input
                 type="number"
                 min="0"
                 placeholder="Annual Income"
-                value={annualIncome2}
+                value={sec_annual_inc}
                 onChange={(e) => {
-                  setAnnualIncome2(e.target.value);
+                  setSec_annual_inc(e.target.value);
                 }}
               />
               <input
                 type="number"
                 placeholder="Current Debt to Income Ratio(0 to 100)"
-                value={debtRatio}
+                value={dti_joint}
                 onChange={(e) => {
-                  setDebtRatio(e.target.value);
+                  setDti_joint(e.target.value);
                 }}
               />
               <input
                 type="number"
                 min="1"
                 placeholder="Number of mortgage Accounts"
-                value={mortgage}
+                value={sec_app_mort_acc}
                 onChange={(e) => {
-                  setMortgage(e.target.value);
+                  setSec_app_mort_acc(e.target.value);
                 }}
               />
               <input
                 type="number"
                 min="0"
                 placeholder="Credit used relative to all available revolving credit"
-                value={creditUsed}
+                value={sec_app_revol_util}
                 onChange={(e) => {
-                  setCreditUsed(e.target.value);
+                  setSec_app_revol_util(e.target.value);
                 }}
               />
               <input
@@ -161,9 +190,9 @@ function JointApplicant() {
                 min="0"
                 placeholder="Credit Inquiries in last 6 months:
                 "
-                value={creditInquires}
+                value={sec_app_inq_last_6mths}
                 onChange={(e) => {
-                  setCreditInquires(e.target.value);
+                  setSec_app_inq_last_6mths(e.target.value);
                 }}
               />
             </div>
@@ -172,19 +201,19 @@ function JointApplicant() {
             className="jointApplicant__formButton"
             onClick={async () => {
               const inputs = {
-                currentBalance: currentBalance,
-                cibil1: cibil1,
-                cibil2: cibil2,
-                loan: loan,
+                total_bal_il: total_bal_il,
+                fico_avg_score: fico_avg_score,
+                sec_fico_avg_score: sec_fico_avg_score,
+                loan_amnt: loan_amnt,
                 term: term,
-                debtRatio: debtRatio,
-                homeOwnership: homeOwnership,
-                annualIncome1: annualIncome1,
-                annualIncome2: annualIncome2,
-                mortgage: mortgage,
-                creditLine: creditLine,
-                creditUsed: creditUsed,
-                creditInquires: creditInquires,
+                dti_joint: dti_joint,
+                home_ownership: home_ownership,
+                annual_inc: annual_inc,
+                sec_annual_inc: sec_annual_inc,
+                sec_app_mort_acc: sec_app_mort_acc,
+                er_credit_open_date: er_credit_open_date,
+                sec_app_revol_util: sec_app_revol_util,
+                sec_app_inq_last_6mths: sec_app_inq_last_6mths,
               };
               const response = await fetch("/joint", {
                 method: "POST",

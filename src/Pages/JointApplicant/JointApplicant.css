@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   height: 140px;
-  background-color: #501b1d;
+  background-color: white;
   justify-content: center;
 }
 
@@ -10,8 +10,9 @@
   font-size: 35px;
   font-weight: 500;
   line-height: 30px;
-  color: whitesmoke;
+  color: orangered;
   margin-bottom: 2%;
+  margin-top: 3%;
 }
 
 .jointApplicant__mainHeader {
@@ -19,7 +20,7 @@
   align-items: center;
   padding: 20px;
   margin-left: 7%;
-  color: #2e1114;
+  color: orangered;
 }
 
 .jointApplicant__mainImage {
@@ -43,7 +44,7 @@
 .jointApplicant__mainHome:hover,
 .jointApplicant__mainHeading:hover {
   cursor: pointer;
-  border-bottom: 2px solid #2e1114;
+  border-bottom: 2px solid orangered;
 }
 
 .jointApplicant__mainForm > h2 {
@@ -52,7 +53,7 @@
   line-height: 30px;
   margin-top: 1%;
   margin-left: 3%;
-  color: #2e1114;
+  color: orangered;
 }
 
 .jointApplicant__form {
@@ -80,12 +81,17 @@
   margin-left: 5%;
 }
 
+.jointApplicant__formLeft > input::placeholder,
+.jointApplicant__formRight > input::placeholder {
+  font-size: 16px;
+}
+
 .jointApplicant__formButton {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: #501b1d;
+  background-color: orangered;
   height: 30px;
   width: 60%;
   margin: 10px 0;
@@ -93,14 +99,15 @@
   font-size: 14px;
   color: whitesmoke;
   margin-left: 15%;
-  border: 2px solid #501b1d;
+  border: 2px solid orangered;
   font-weight: 600;
+  margin-top: 25px;
 }
 
 .jointApplicant__formButton:hover {
-  color: #501b1d;
+  color: orangered;
   background-color: white;
-  border: 2px solid #501b1d;
+  border: 2px solid orangered;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,6 +120,7 @@
   margin-left: 15%;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 25px;
 }
 
 .jointApplicant__formLeft > input:focus::-webkit-input-placeholder,

@@ -1,0 +1,31 @@
+.attributes {
+  display: flex;
+  align-items: center;
+}
+
+.attribute__left {
+  margin-bottom: 15%;
+  margin-left: 3%;
+}
+
+.attribute__right {
+  margin-bottom: 5%;
+  margin-right: 2%;
+}
+
+.attribute__right > h3 {
+  padding-bottom: 10px;
+}
+
+.attribute__right > a {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: orangered;
+  text-decoration: none;
+}
+
+.attribute__right > a:hover {
+  cursor: pointer;
+}

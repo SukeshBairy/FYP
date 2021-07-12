@@ -1,84 +1,198 @@
-.home__buttons {
-  display: flex;
-  justify-content: space-around;
-}
-
-.home__button {
-  justify-content: center;
+.home__page {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  background-color: #501b1d;
-  height: 30px;
-  width: 30%;
-  margin: 10px 0;
-  border-radius: 5px;
-  font-size: 14px;
-  color: whitesmoke;
-  border: 2px solid #501b1d;
-  font-weight: 600;
+  height: 400px;
 }
 
-.home__button:hover {
-  justify-content: center;
-  color: #501b1d;
-  background-color: white;
-  border: 2px solid #501b1d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  height: 30px;
-  width: 30%;
-  margin: 10px 0;
+.home__page > img {
+  width: 100%;
+  height: contain;
+}
+
+.home__page > h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: black;
+  padding-bottom: 3%;
+  margin-top: -400px;
+}
+
+.home__page > h2 {
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 24px;
+  color: black;
+}
+
+.home__page > h2 > span {
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 24px;
+  color: orangered;
+}
+
+.home__pagebutton {
+  margin-top: 3%;
+  background-color: orangered;
+  height: 20px;
+  width: 150px;
+  padding: 13px;
+  color: white;
   border-radius: 5px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
   cursor: pointer;
 }
 
-.home__contact {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 200px;
-  background-color: #501b1d;
+.predict__heading {
+  margin-top: 500px;
+  margin-bottom: 5%;
 }
 
-.home__contactInfo {
-  background-color: #501b1d;
+.predict__heading > h3 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24px;
+  color: orangered;
+  margin-left: 37%;
+}
+
+.predict__heading > h3 > span {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24px;
+  color: black;
+}
+
+.predict__heading > img {
+  margin-left: 46%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.predict__heading > p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: black;
+  width: 700px;
+  margin-left: 7%;
+}
+
+.home__predict {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__attributes {
+  display: flex;
+}
+
+.home__visual {
+  display: flex;
+}
+
+.visual__left {
+  cursor: pointer;
+}
+.visual__right {
+  margin-left: 90px;
+}
+
+.visual__button1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
+  height: 45px;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.visual__right > img {
+  height: 300px;
+  width: 600px;
+}
+
+.visual__right > h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.visual__right > p {
+  height: 30px;
+  width: 600px;
+}
+
+.visual__button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
+  height: 45px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.home_decider {
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+  justify-content: space-evenly;
+}
+
+.modal__closeButton {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.modal__individualImg,
+.modal__jointImg {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.home__contactImage > img {
-  padding: 70px 50px 50px 190px;
-  width: 150px;
-  height: 160px;
+.modal__individual > h3,
+.modal__joint > h3 {
+  color: orangered;
 }
 
-.home__contactName {
-  padding: 5px;
+.modal__individual,
+.modal__joint,
+.modal__closeButton {
+  cursor: pointer;
 }
 
-.home__contactName > h3 {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 30px;
-  color: white;
-}
-
-.home__contactName > h2 {
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 30px;
-  color: white;
-}
-
-.home__contactName > h5 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  color: white;
+.aboutUs__coders {
+  background-color: whitesmoke;
+  margin-top: 10%;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  bottom: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
 }

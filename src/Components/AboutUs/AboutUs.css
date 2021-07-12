@@ -1,0 +1,48 @@
+.aboutUs {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 390px;
+  width: 220px;
+  margin-left: 1%;
+  background-color: white;
+  margin-top: 5%;
+  box-shadow: 2.5px 5px 10px #888888;
+}
+
+.aboutUs__content > img {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  margin-top: 7%;
+  height: 165px;
+  width: 150px;
+}
+
+.aboutUs__content > h3 {
+  margin-left: 12%;
+  /* font-size: 18px;
+  font-weight: 500;
+  line-height: 20; */
+}
+
+.aboutUs__content > h4 {
+  font-size: 14px;
+  color: orangered;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+
+.aboutUs__content > p {
+  margin-left: 12%;
+  margin-top: 3%;
+  width: 200px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  justify-content: center;
+}
+
+.aboutUs__links {
+  margin-top: 8%;
+  margin-left: 10%;
+}

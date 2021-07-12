@@ -1,0 +1,26 @@
+.graph {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  height: 70px;
+  box-shadow: 2.5px 5px 10px #888888;
+  border-radius: 5px;
+  margin-bottom: 7%;
+}
+
+.graph > h2 {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-left: 7%;
+}
+
+.graph > h2:hover {
+  color: orangered;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-left: 7%;
+}

@@ -1,12 +1,32 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #501b1d;
+  background-color: whitesmoke;
   align-items: center;
   height: 70px;
   top: 0;
-  z-index: 1;
+  z-index: 999;
   position: sticky;
+  box-shadow: 2.5px 5px 10px #888888;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo > h3 {
+  font: size 24px;
+  font-weight: 900;
+  line-height: 18px;
+  color: orangered;
+}
+
+.header__logo > h3 > span {
+  font: size 24px;
+  font-weight: 900;
+  line-height: 18px;
+  color: black;
 }
 
 .header__logo > img {
@@ -23,7 +43,7 @@
 .header__options {
   display: flex;
   justify-content: space-between;
-  color: whitesmoke;
+  color: black;
   font-size: 15px;
   font-weight: 600;
   padding: 10px;
@@ -32,7 +52,6 @@
 .header__optionsHome,
 .header__optionsPredict,
 .header__optionsVisualize,
-.header__optionsInsights,
 .header__optionsContact {
   margin-right: 25px;
 }
@@ -40,9 +59,7 @@
 .header__optionsHome:hover,
 .header__optionsPredict:hover,
 .header__optionsVisualize:hover,
-.header__optionsInsights:hover,
 .header__optionsContact:hover {
-  padding-bottom: 7px;
-  border-bottom: 2px solid white;
+  color: orangered;
   cursor: pointer;
 }

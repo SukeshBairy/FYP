@@ -19,15 +19,17 @@ function Header() {
     <div className="header">
       <div className="header__logo">
         <img src="/images/logo.svg" alt="" onClick={logoutOfApp} />
+        <h3>
+          <span>LOAN</span> DEFAULT PREDICTION
+        </h3>
       </div>
       <div className="header__options">
         <div className="header__optionsHome" onClick={() => history.push("/")}>
           HOME
         </div>
         <div className="header__optionsPredict">PREDICT</div>
-        <div className="header__optionsVisualize">VISUALIZE</div>
-        <div className="header__optionsInsights">INSIGHTS</div>
-        <div className="header__optionsContact">CONTACT</div>
+        <div className="header__optionsVisualize">VISUALIZATION</div>
+        <div className="header__optionsContact">ABOUT US</div>
       </div>
     </div>
   );
